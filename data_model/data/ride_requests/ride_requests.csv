@@ -1,0 +1,3 @@
+user_id,request_time,location_lat,location_lng,destination_lat,destination_lng,riders,status
+9e1b5258-66c8-4263-9b6e-c22a264092f4,2017-05-05 00:00:00,31.1,-150.1,31.1,-151.1,1,PENDING
+60a230b4-281d-42bf-97b7-a0b835428ef2,2017-05-05 00:00:00,22.2,179.1,22.2,170.1,3,ABORTED

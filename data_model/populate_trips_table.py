@@ -23,6 +23,7 @@ def populate_user_table():
         for row in reader:
             dbsession.execute(insert_trip_data_point, [row['user_id']])
 
+
 def populate_trips_table():
     create_trips_table = """CREATE TABLE IF NOT EXISTS trips(
             trip_id text, 
