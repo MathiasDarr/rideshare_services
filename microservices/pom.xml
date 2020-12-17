@@ -19,7 +19,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<modules>
-		<module>rabbitpractice</module>
+		<module>rideservice</module>
 		<module>driver-dispatch-service</module>
 <!--		<module>trip_service</module>-->
 <!--		<module>authentication_service</module>-->

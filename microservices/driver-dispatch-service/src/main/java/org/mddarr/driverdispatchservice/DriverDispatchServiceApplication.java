@@ -21,8 +21,7 @@ public class DriverDispatchServiceApplication {
 	}
 
 	static final String topicExchangeName = "spring-boot-exchange";
-
-	static final String queueName = "spring-boot";
+	static final String queueName = "ride-requests";
 
 	@Bean
 	Queue queue() {
@@ -53,5 +52,5 @@ public class DriverDispatchServiceApplication {
 	MessageListenerAdapter listenerAdapter(Receiver receiver) {
 		return new MessageListenerAdapter(receiver, "receiveMessage");
 	}
-	
+
 }

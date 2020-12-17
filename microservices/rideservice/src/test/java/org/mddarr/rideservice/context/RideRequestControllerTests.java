@@ -30,34 +30,34 @@ public class RideRequestControllerTests {
     }
 
 
-
-    @Configuration
-    static class TestConfig implements ApplicationListener<ContextRefreshedEvent>{
-        /*
-        Configuration class that un-registers MessageHandlers it finds in the ApplicationContexxt from the message channels they are subscribed to.
-        	* The intent is to reduce additional processing and additional messages not
-	        * related to the test.
-         */
-        @Autowired
-        private List<SubscribableChannel> channels;
-
-        @Autowired
-        private List<MessageHandler> handlers;
-
-
-        @Override
-        public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-            for (MessageHandler handler: handlers){
-                if(handler instanceof SimpAnnotationMethodMessageHandler){
-                    continue;
-                }
-                for(SubscribableChannel channel: channels){
-                    channel.unsubscribe(handler);
-                }
-
-            }
-        }
-    }
+//
+//    @Configuration
+//    static class TestConfig implements ApplicationListener<ContextRefreshedEvent>{
+//        /*
+//        Configuration class that un-registers MessageHandlers it finds in the ApplicationContexxt from the message channels they are subscribed to.
+//        	* The intent is to reduce additional processing and additional messages not
+//	        * related to the test.
+//         */
+//        @Autowired
+//        private List<SubscribableChannel> channels;
+//
+//        @Autowired
+//        private List<MessageHandler> handlers;
+//
+//
+//        @Override
+//        public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
+//            for (MessageHandler handler: handlers){
+//                if(handler instanceof SimpAnnotationMethodMessageHandler){
+//                    continue;
+//                }
+//                for(SubscribableChannel channel: channels){
+//                    channel.unsubscribe(handler);
+//                }
+//
+//            }
+//        }
+//    }
 
 
 

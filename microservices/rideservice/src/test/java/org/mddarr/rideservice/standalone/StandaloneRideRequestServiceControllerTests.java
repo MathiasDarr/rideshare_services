@@ -6,6 +6,8 @@ import org.mddarr.rideservice.models.RideRequest;
 import org.mddarr.rideservice.repository.RideRequestRepository;
 import org.mddarr.rideservice.services.riderequest.RideRequestService;
 import org.mddarr.rideservice.services.rides.RideService;
+import org.mockito.Mock;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
@@ -22,9 +24,12 @@ public class StandaloneRideRequestServiceControllerTests {
     @Autowired
     private RideRequestRepository rideRequestRepository;
 
+    @Mock
+    RabbitTemplate rabbitTemplate;
+
     @BeforeEach
     public void setup(){
-        this.rideRequestService = new RideRequestService(rideRequestRepository);
+        this.rideRequestService = new RideRequestService(rideRequestRepository, rabbitTemplate);
     }
 
     @Test
