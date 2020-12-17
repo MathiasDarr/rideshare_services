@@ -20,6 +20,7 @@
 	</properties>
 	<modules>
 		<module>rabbitpractice</module>
+		<module>driver-dispatch-service</module>
 <!--		<module>trip_service</module>-->
 <!--		<module>authentication_service</module>-->
 <!--		<module>rideservice</module>-->

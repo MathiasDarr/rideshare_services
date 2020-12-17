@@ -1,4 +1,4 @@
-package org.mddarr.rabbitpractice;
+package org.mddarr.driverdispatchservice;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -11,8 +11,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+
+
 @SpringBootApplication
-public class MessagingRabbitmqApplication {
+public class DriverDispatchServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DriverDispatchServiceApplication.class, args);
+	}
 
 	static final String topicExchangeName = "spring-boot-exchange";
 
@@ -33,23 +39,19 @@ public class MessagingRabbitmqApplication {
 		return BindingBuilder.bind(queue).to(exchange).with("foo.bar.#");
 	}
 
-//	@Bean
-//	SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
-//			MessageListenerAdapter listenerAdapter) {
-//		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
-//		container.setConnectionFactory(connectionFactory);
-//		container.setQueueNames(queueName);
-//		container.setMessageListener(listenerAdapter);
-//		return container;
-//	}
-//
-//	@Bean
-//	MessageListenerAdapter listenerAdapter(Receiver receiver) {
-//		return new MessageListenerAdapter(receiver, "receiveMessage");
-//	}
-
-	public static void main(String[] args) throws InterruptedException {
-		SpringApplication.run(MessagingRabbitmqApplication.class, args).close();
+	@Bean
+	SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
+											 MessageListenerAdapter listenerAdapter) {
+		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+		container.setConnectionFactory(connectionFactory);
+		container.setQueueNames(queueName);
+		container.setMessageListener(listenerAdapter);
+		return container;
 	}
 
+	@Bean
+	MessageListenerAdapter listenerAdapter(Receiver receiver) {
+		return new MessageListenerAdapter(receiver, "receiveMessage");
+	}
+	
 }
