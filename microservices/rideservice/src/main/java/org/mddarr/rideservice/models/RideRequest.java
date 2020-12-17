@@ -21,8 +21,6 @@ public class RideRequest {
 
     private Integer riders;
 
-    private String destination;
-
     private Double location_lat;
     private Double location_lng;
 
@@ -72,13 +70,6 @@ public class RideRequest {
         this.status = status;
     }
 
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
 
     public Double getLocation_lat() {
         return location_lat;
