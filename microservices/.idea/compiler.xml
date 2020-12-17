@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rideservice" />
+        <module name="location_rabbit" />
         <module name="locationtracker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="location_rabbit" target="11" />
       <module name="locationtracker" target="11" />
       <module name="microservices" target="11" />
       <module name="rideservice" target="11" />
@@ -18,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="location_rabbit" options="-parameters" />
       <module name="locationtracker" options="-parameters" />
       <module name="rideservice" options="-parameters" />
     </option>

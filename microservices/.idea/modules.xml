@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/rabbitpractice/location_rabbit.iml" filepath="$PROJECT_DIR$/rabbitpractice/location_rabbit.iml" />
       <module fileurl="file://$PROJECT_DIR$/locationtracker/locationtracker.iml" filepath="$PROJECT_DIR$/locationtracker/locationtracker.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservices.iml" filepath="$PROJECT_DIR$/microservices.iml" />
       <module fileurl="file://$PROJECT_DIR$/rideservice/rideservice.iml" filepath="$PROJECT_DIR$/rideservice/rideservice.iml" />

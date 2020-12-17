@@ -19,10 +19,11 @@
 		<java.version>11</java.version>
 	</properties>
 	<modules>
+		<module>rabbitpractice</module>
 <!--		<module>trip_service</module>-->
 <!--		<module>authentication_service</module>-->
-		<module>rideservice</module>
-		<module>locationtracker</module>
+<!--		<module>rideservice</module>-->
+<!--		<module>locationtracker</module>-->
 	</modules>
 
 	<repositories>

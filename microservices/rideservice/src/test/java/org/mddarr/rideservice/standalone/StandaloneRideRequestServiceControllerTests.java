@@ -22,12 +22,11 @@ public class StandaloneRideRequestServiceControllerTests {
     @Autowired
     private RideRequestRepository rideRequestRepository;
 
-
     @BeforeEach
     public void setup(){
         this.rideRequestService = new RideRequestService(rideRequestRepository);
-
     }
+
     @Test
     public void contextLoads(){
 
@@ -35,7 +34,6 @@ public class StandaloneRideRequestServiceControllerTests {
 
     @Test void requestRide(){
         RideRequest rideRequest = new RideRequest();
-
     }
 
     private static class TestAnnotationMethodHandler extends SimpAnnotationMethodMessageHandler {

@@ -1,0 +1,3 @@
+### Messaging Notes ###
+
+SubscribableChannel
