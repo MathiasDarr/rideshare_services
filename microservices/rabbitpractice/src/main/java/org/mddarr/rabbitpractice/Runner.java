@@ -1,4 +1,4 @@
-package org.mddarr.locationrabbit;
+package org.mddarr.rabbitpractice;
 
 import java.util.concurrent.TimeUnit;
 

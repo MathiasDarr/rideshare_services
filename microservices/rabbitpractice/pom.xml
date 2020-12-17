@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.mddarr</groupId>
-	<artifactId>location_rabbit</artifactId>
+	<artifactId>rabbitpractice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>location_rabbit</name>
 	<description>Demo project for Spring Boot</description>

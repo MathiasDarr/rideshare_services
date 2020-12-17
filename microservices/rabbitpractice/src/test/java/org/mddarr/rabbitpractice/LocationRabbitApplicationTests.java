@@ -1,9 +1,9 @@
-package org.mddarr.locationrabbit;
+package org.mddarr.rabbitpractice;
 
 import org.junit.jupiter.api.Test;
-import org.mddarr.locationrabbit.MessagingRabbitmqApplication;
-import org.mddarr.locationrabbit.Receiver;
-import org.mddarr.locationrabbit.Runner;
+import org.mddarr.rabbitpractice.MessagingRabbitmqApplication;
+import org.mddarr.rabbitpractice.Receiver;
+import org.mddarr.rabbitpractice.Runner;
 import org.springframework.amqp.AmqpConnectException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

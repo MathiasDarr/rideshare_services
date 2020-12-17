@@ -1,4 +1,4 @@
-package org.mddarr.locationrabbit;
+package org.mddarr.rabbitpractice;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

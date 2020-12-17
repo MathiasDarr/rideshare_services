@@ -1,4 +1,4 @@
-package org.mddarr.locationrabbit;
+package org.mddarr.rabbitpractice;
 
 import java.util.concurrent.CountDownLatch;
 import org.springframework.stereotype.Component;
