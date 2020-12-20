@@ -7,21 +7,35 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rideservice" />
-        <module name="location_rabbit" />
         <module name="locationtracker" />
+        <module name="rabbitpractice" />
+        <module name="kafka-producer" />
+        <module name="kafka-receiver" />
+        <module name="relationalrideservice" />
+        <module name="driver-dispatch-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="location_rabbit" target="11" />
+      <module name="authentication_service" target="11" />
+      <module name="driver-dispatch-service" target="11" />
+      <module name="kafka-producer" target="11" />
+      <module name="kafka-receiver" target="11" />
       <module name="locationtracker" target="11" />
       <module name="microservices" target="11" />
+      <module name="rabbitpractice" target="11" />
+      <module name="relationalrideservice" target="11" />
       <module name="rideservice" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="location_rabbit" options="-parameters" />
+      <module name="authentication_service" options="-parameters" />
+      <module name="driver-dispatch-service" options="-parameters" />
+      <module name="kafka-producer" options="-parameters" />
+      <module name="kafka-receiver" options="-parameters" />
       <module name="locationtracker" options="-parameters" />
+      <module name="rabbitpractice" options="-parameters" />
+      <module name="relationalrideservice" options="-parameters" />
       <module name="rideservice" options="-parameters" />
     </option>
   </component>

@@ -19,9 +19,16 @@
 		<java.version>11</java.version>
 	</properties>
 	<modules>
-		<module>rideservice</module>
-		<module>driver-dispatch-service</module>
-<!--		<module>trip_service</module>-->
+		<module>kafka-producer</module>
+		<module>kafka-receiver</module>
+
+		<!--		<module>authentication_service</module>-->
+
+<!--		<module>rideservice</module>-->
+<!--		<module>driver-dispatch-service</module>-->
+<!--		<module>relationalrideservice</module>-->
+
+		<!--		<module>trip_service</module>-->
 <!--		<module>authentication_service</module>-->
 <!--		<module>rideservice</module>-->
 <!--		<module>locationtracker</module>-->

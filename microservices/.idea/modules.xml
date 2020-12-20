@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/driver-dispatch-service/driver-dispatch-service.iml" filepath="$PROJECT_DIR$/driver-dispatch-service/driver-dispatch-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-producer/kafka-producer.iml" filepath="$PROJECT_DIR$/kafka-producer/kafka-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-receiver/kafka-receiver.iml" filepath="$PROJECT_DIR$/kafka-receiver/kafka-receiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitpractice/location_rabbit.iml" filepath="$PROJECT_DIR$/rabbitpractice/location_rabbit.iml" />
       <module fileurl="file://$PROJECT_DIR$/locationtracker/locationtracker.iml" filepath="$PROJECT_DIR$/locationtracker/locationtracker.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservices.iml" filepath="$PROJECT_DIR$/microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/relationalrideservice/relationalrideservice.iml" filepath="$PROJECT_DIR$/relationalrideservice/relationalrideservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/rideservice/rideservice.iml" filepath="$PROJECT_DIR$/rideservice/rideservice.iml" />
     </modules>
   </component>

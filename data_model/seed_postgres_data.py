@@ -57,3 +57,5 @@ if __name__ =='__main__':
     cur = conn.cursor()
     populate_drivers_table()
     populate_users_table()
+
+    print("THE POSTGRES DATABASE HAS BEEN SEEDED.")

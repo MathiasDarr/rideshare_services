@@ -125,3 +125,4 @@ if __name__ == '__main__':
     populate_user_table()
     populate_user_trips_table()
 
+    print("THE CASSANDRA DATABASE HAS BEEN SEEDED.")
