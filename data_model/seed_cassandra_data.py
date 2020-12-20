@@ -89,7 +89,6 @@ def populate_trips_table():
             dbsession.execute(insert_trip_data_point, [row['trip_id'], row['user_id'], 0.0, 0.0])
 
 
-
 def populate_user_trips_table():
     create_trip_data_point_table = """CREATE TABLE IF NOT EXISTS trip_data(
         trip_id text, 
@@ -108,7 +107,6 @@ def populate_user_trips_table():
         reader = csv.DictReader(csvfile)
         for row in reader:
             dbsession.execute(insert_trip_data_point,[row['trip_id'], row['time'], float(row['latitude']),float(row['longitude'])])
-
 
 
 if __name__ == '__main__':

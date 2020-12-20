@@ -63,3 +63,8 @@ This repository contains microservices implemented using Spring, frontend develo
    java -jar 
 
 
+
+//    "schema.whitelist": "snowpack",
+
+
+
