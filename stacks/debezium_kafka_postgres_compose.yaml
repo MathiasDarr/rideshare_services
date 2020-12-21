@@ -78,15 +78,6 @@ services:
       CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_PLUGIN_PATH: /usr/share/java,/usr/share/confluent-hub-components
 
-  elasticsearch7:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.4.0
-    container_name: elasticsearch7
-    ports:
-      - 29200:9200
-    environment:
-      xpack.security.enabled: "false"
-      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
-      discovery.type: "single-node"
 
 
 volumes:

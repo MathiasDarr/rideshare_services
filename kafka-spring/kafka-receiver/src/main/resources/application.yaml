@@ -3,6 +3,26 @@ spring:
   cloud:
     stream:
       bindings:
-        handle-out-0.destination: testEmbeddedOut
-        handle-in-0.destination: testEmbeddedIn
-        handle-in-0.group: embeddedKafkaApplication
+        handle-out-0:
+          destination: testEmbeddedOut
+        handle-in-0:
+          destination: testEmbeddedIn
+          group: embeddedKafkaApplication
+
+#        riderequests-out-0:
+#          destination: rideRequestsOut
+#        riderequests-in-0:
+#          destination: rideRequestsIn
+#          group: embeddedKafkaApplication
+#
+#        source1-out-0:
+#          destination: test1
+#        source2-out-0:
+#          destination: test2
+#        sink1-in-0:
+#          destination: test1
+#        sink2-in-0:
+#          destination: test2
+#
+#      function:
+#        definition: source1;source2;sink1;sink2
