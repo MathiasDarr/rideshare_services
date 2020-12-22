@@ -1,4 +1,4 @@
-package org.mddarr.kafkaproducer;
+package org.mddarr.requestprocessor;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -14,5 +14,6 @@
     <modules>
         <module>avro-schema</module>
         <module>request-processor-service</module>
+<!--        <module>request-receiver-service</module>-->
     </modules>
 </project>
