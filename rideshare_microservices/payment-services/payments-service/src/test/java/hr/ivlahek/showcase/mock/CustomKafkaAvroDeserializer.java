@@ -1,14 +1,15 @@
 package hr.ivlahek.showcase.mock;
 
 import hr.ivlahek.showcase.Constants;
-import hr.ivlahek.showcase.event.dto.Event1;
-import hr.ivlahek.showcase.event.dto.Event2;
-import hr.ivlahek.showcase.event.dto.Event3;
-import hr.ivlahek.showcase.event.dto.Event4;
+
 import io.confluent.kafka.schemaregistry.client.MockSchemaRegistryClient;
 import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
 import org.apache.avro.Schema;
+import org.mddarr.payments.event.dto.Event1;
+import org.mddarr.payments.event.dto.Event2;
+import org.mddarr.payments.event.dto.Event3;
+import org.mddarr.payments.event.dto.Event4;
 
 /**
  * This code is not thread safe and should not be used in production environment

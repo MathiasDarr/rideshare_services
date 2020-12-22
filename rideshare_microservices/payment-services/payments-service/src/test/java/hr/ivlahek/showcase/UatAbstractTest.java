@@ -1,9 +1,6 @@
 package hr.ivlahek.showcase;
 
-import hr.ivlahek.showcase.event.dto.Event1;
-import hr.ivlahek.showcase.event.dto.Event2;
-import hr.ivlahek.showcase.event.dto.Event3;
-import hr.ivlahek.showcase.event.dto.Event4;
+
 import hr.ivlahek.showcase.mock.CustomKafkaAvroDeserializer;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -14,6 +11,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
+import org.mddarr.payments.event.dto.Event1;
+import org.mddarr.payments.event.dto.Event2;
+import org.mddarr.payments.event.dto.Event3;
+import org.mddarr.payments.event.dto.Event4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,8 +1,8 @@
 {
   "type" : "record",
   "name" : "Event3",
-  "namespace" : "hr.ivlahek.showcase.event.dto",
-  "doc" : "Schema for hr.ivlahek.showcase.event.dto.Event3",
+  "namespace" : "org.mddarr.payments.event.dto",
+  "doc" : "Schema",
   "fields" : [ {
     "name" : "id",
     "type" : [ "null", "int" ]

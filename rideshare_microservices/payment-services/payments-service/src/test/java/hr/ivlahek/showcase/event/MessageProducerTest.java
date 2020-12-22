@@ -2,10 +2,11 @@ package hr.ivlahek.showcase.event;
 
 import hr.ivlahek.showcase.Constants;
 import hr.ivlahek.showcase.UatAbstractTest;
-import hr.ivlahek.showcase.event.dto.Event1;
-import hr.ivlahek.showcase.event.dto.Event2;
+
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.Test;
+import org.mddarr.payments.event.dto.Event1;
+import org.mddarr.payments.event.dto.Event2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 

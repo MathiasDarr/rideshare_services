@@ -1,7 +1,7 @@
 {
   "type" : "record",
   "name" : "Event1",
-  "namespace" : "hr.ivlahek.showcase.event.dto",
+  "namespace" : "org.mddarr.payments.event.dto",
   "doc" : "Schema for hr.ivlahek.showcase.event.dto.Event1",
   "fields" : [ {
     "name" : "name",

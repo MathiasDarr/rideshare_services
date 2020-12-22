@@ -1,8 +1,9 @@
 package hr.ivlahek.showcase.event;
 
 import hr.ivlahek.showcase.Constants;
-import hr.ivlahek.showcase.event.dto.Event3;
-import hr.ivlahek.showcase.event.dto.Event4;
+
+import org.mddarr.payments.event.dto.Event3;
+import org.mddarr.payments.event.dto.Event4;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
