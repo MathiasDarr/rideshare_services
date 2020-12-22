@@ -1,20 +1,46 @@
-
 spring:
   cloud:
     stream:
       bindings:
-        handle-out-0:
-          destination: testEmbeddedOut
-        handle-in-0:
-          destination: testEmbeddedIn
-          group: embeddedKafkaApplication
+        uppercase|echo-in-0:
+          destination: uppercase-in
+      function:
+        definition: uppercase|echo
 
+
+
+
+
+#spring:
+#  cloud:
+#    stream:
+#      bindings:
+#        uppercase|echo-in-0:
+#          destination: uppercase-in
+#        source1-out-0:
+#          destination: source1
+#        source2-out-0:
+#          destination: source2
+#        sink1-in-0:
+#          destination: sink1
+#        sink2-in-0:
+#          destination: sink2
+#      function:
+#        definition: source1;source2;sink1;sink2;uppercase;echo
+
+
+#        handle-out-0:
+#          destination: testEmbeddedOut
+#        handle-in-0:
+#          destination: testEmbeddedIn
+#          group: embeddedKafkaApplication
+#
 #        riderequests-out-0:
 #          destination: rideRequestsOut
 #        riderequests-in-0:
 #          destination: rideRequestsIn
-#          group: embeddedKafkaApplication
-#
+#          group: rideRequestsKafkaApplication
+##
 #        source1-out-0:
 #          destination: test1
 #        source2-out-0:

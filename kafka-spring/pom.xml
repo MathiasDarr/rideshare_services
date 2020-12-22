@@ -19,10 +19,18 @@
 		<java.version>11</java.version>
 	</properties>
 	<modules>
-		<module>kafka-producer</module>
+		<module>transaction-kafka-samples</module>
+<!--		<module>streams-join</module>-->
+<!--		<module>kafka-producer</module>-->
+<!--		<module>multi-functions</module>-->
+<!--		<module>aggregator</module>-->
+<!--		<module>word-count</module>-->
+<!--		<module>function-composition</module>-->
+<!--&lt;!&ndash;		<module>kafka-producer</module>&ndash;&gt;-->
 <!--		<module>kafka-receiver</module>-->
 <!--		<module>kafka-brancher</module>-->
-		<module>avro-schema</module>
+
+<!--		<module>avro-schema</module>-->
 	</modules>
 
 	<repositories>

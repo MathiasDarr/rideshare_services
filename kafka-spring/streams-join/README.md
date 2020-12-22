@@ -1,0 +1,2 @@
+docker exec -it kafka /kafka/bin/kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic output-topic --key-deserializer org.apache.kafka.common.serialization.StringDeserializer \
+ --value-deserializer org.apache.kafka.common.serialization.LongDeserializer --property print.key=true --property key.separator="-"
