@@ -13,7 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>avro-schema</module>
-        <module>request-processor-service</module>
+<!--        <module>request-processor-service</module>-->
+        <module>ride-request-producer</module>
 <!--        <module>request-receiver-service</module>-->
     </modules>
 </project>
