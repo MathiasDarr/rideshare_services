@@ -1,4 +1,4 @@
-package hr.ivlahek.showcase.mock;
+package org.mddarr.paymentsservice.mock;
 
 import io.confluent.kafka.schemaregistry.client.MockSchemaRegistryClient;
 import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;

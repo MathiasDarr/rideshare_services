@@ -1,7 +1,7 @@
-package hr.ivlahek.showcase.event;
+package org.mddarr.paymentsservice.event;
 
-import hr.ivlahek.showcase.Constants;
-import hr.ivlahek.showcase.UatAbstractTest;
+import org.mddarr.paymentsservice.Constants;
+import org.mddarr.paymentsservice.UatAbstractTest;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.Test;

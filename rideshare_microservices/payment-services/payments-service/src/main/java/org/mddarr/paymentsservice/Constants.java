@@ -1,4 +1,4 @@
-package hr.ivlahek.showcase;
+package org.mddarr.paymentsservice;
 
 public class Constants {
     public static final String EVENT_3_TOPIC = "event-3-topic";

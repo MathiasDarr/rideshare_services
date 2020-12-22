@@ -1,4 +1,4 @@
-package hr.ivlahek.showcase;
+package org.mddarr.paymentsservice;
 
 public interface IntegrationTest {
 }

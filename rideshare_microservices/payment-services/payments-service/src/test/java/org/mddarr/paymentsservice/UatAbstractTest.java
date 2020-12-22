@@ -1,7 +1,7 @@
-package hr.ivlahek.showcase;
+package org.mddarr.paymentsservice;
 
 
-import hr.ivlahek.showcase.mock.CustomKafkaAvroDeserializer;
+import org.mddarr.paymentsservice.mock.CustomKafkaAvroDeserializer;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.KafkaProducer;

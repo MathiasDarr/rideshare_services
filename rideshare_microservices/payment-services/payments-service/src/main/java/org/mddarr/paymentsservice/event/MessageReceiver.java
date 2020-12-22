@@ -1,6 +1,6 @@
-package hr.ivlahek.showcase.event;
+package org.mddarr.paymentsservice.event;
 
-import hr.ivlahek.showcase.Constants;
+import org.mddarr.paymentsservice.Constants;
 
 import org.mddarr.payments.event.dto.Event3;
 import org.mddarr.payments.event.dto.Event4;
