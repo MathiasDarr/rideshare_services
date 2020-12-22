@@ -16,7 +16,7 @@ public class RideRequestsController {
 
     @PutMapping(value="riderequests")
     public String postRideRequest(@RequestBody RideRequest rideRequest){
-
+        rideRequestAvroProducer.sendRideRequest(rideRequest);
         return "a";
     }
 

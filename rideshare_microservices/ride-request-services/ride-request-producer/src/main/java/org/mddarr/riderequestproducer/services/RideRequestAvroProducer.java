@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class RideRequestAvroProducer implements RideRequestServiceInterface{
 
+    public final String TOPIC = "ride-requests";
+
     @Autowired
     private KafkaTemplate<String, AvroRideRequest> kafkaTemplate;
 
@@ -19,6 +21,6 @@ public class RideRequestAvroProducer implements RideRequestServiceInterface{
     @Override
     public void sendRideRequest(RideRequest rideRequest) {
         logger.info("Send ride request {}", rideRequest );
-        kafkaTemplate.send("ride-requests","key1", new AvroRideRequest(rideRequest.getUser(), rideRequest.getRiders()));
+        kafkaTemplate.send(TOPIC,"key1", new AvroRideRequest(rideRequest.getUser(), rideRequest.getRiders()));
     }
 }
