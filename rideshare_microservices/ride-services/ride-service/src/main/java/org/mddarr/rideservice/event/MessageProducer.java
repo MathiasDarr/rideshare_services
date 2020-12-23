@@ -1,6 +1,6 @@
-package org.mddarr.paymentsservice.event;
+package org.mddarr.rideservice.event;
 
-import org.mddarr.paymentsservice.Constants;
+import org.mddarr.rideservice.Constants;
 
 
 import org.mddarr.rides.event.dto.Event1;

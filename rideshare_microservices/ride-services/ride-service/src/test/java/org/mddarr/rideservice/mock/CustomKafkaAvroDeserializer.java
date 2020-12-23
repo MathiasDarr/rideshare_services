@@ -1,6 +1,6 @@
-package org.mddarr.paymentsservice.mock;
+package org.mddarr.rideservice.mock;
 
-import org.mddarr.paymentsservice.Constants;
+import org.mddarr.rideservice.Constants;
 
 import io.confluent.kafka.schemaregistry.client.MockSchemaRegistryClient;
 import io.confluent.kafka.schemaregistry.client.SchemaRegistryClient;

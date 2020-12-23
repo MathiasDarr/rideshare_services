@@ -1,4 +1,4 @@
-package org.mddarr.paymentsservice;
+package org.mddarr.rideservice;
 
 public interface IntegrationTest {
 }

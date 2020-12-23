@@ -120,7 +120,7 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
-                    <groups>org.mddarr.paymentsservice.IntegrationTest</groups>
+                    <groups>org.mddarr.rideservice.IntegrationTest</groups>
                 </configuration>
                 <executions>
                     <execution>
@@ -141,7 +141,7 @@
                     <includes>
                         <include>**/*.java</include>
                     </includes>
-                    <excludedGroups>org.mddarr.paymentsservice.IntegrationTest
+                    <excludedGroups>org.mddarr.rideservice.IntegrationTest
                     </excludedGroups>
                 </configuration>
             </plugin>

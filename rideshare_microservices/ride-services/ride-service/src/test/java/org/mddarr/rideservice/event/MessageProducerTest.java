@@ -1,7 +1,7 @@
-package org.mddarr.paymentsservice.event;
+package org.mddarr.rideservice.event;
 
-import org.mddarr.paymentsservice.Constants;
-import org.mddarr.paymentsservice.UatAbstractTest;
+import org.mddarr.rideservice.Constants;
+import org.mddarr.rideservice.UatAbstractTest;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.Test;

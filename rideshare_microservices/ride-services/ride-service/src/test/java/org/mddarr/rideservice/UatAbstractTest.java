@@ -1,7 +1,7 @@
-package org.mddarr.paymentsservice;
+package org.mddarr.rideservice;
 
 
-import org.mddarr.paymentsservice.mock.CustomKafkaAvroDeserializer;
+import org.mddarr.rideservice.mock.CustomKafkaAvroDeserializer;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.KafkaProducer;

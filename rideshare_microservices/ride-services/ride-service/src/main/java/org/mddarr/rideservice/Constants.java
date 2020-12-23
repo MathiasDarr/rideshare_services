@@ -1,4 +1,4 @@
-package org.mddarr.paymentsservice;
+package org.mddarr.rideservice;
 
 public class Constants {
     public static final String EVENT_3_TOPIC = "event-3-topic";

@@ -1,4 +1,4 @@
-package org.mddarr.paymentsservice;
+package org.mddarr.rideservice;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import javax.annotation.PostConstruct;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "org.mddarr.paymentsservice")
+@ComponentScan(basePackages = "org.mddarr.rideservice")
 public class ShowcaseApp {
 
     public static void main(String[] args) {
