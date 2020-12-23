@@ -1,7 +1,7 @@
 {
   "type" : "record",
   "name" : "Event3",
-  "namespace" : "org.mddarr.payments.event.dto",
+  "namespace" : "org.mddarr.rides.event.dto",
   "doc" : "Schema",
   "fields" : [ {
     "name" : "id",

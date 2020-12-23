@@ -7,8 +7,8 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.Test;
 
-import org.mddarr.payments.event.dto.Event3;
-import org.mddarr.payments.event.dto.Event4;
+import org.mddarr.rides.event.dto.Event3;
+import org.mddarr.rides.event.dto.Event4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 

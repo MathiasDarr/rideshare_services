@@ -5,8 +5,8 @@ import org.mddarr.paymentsservice.UatAbstractTest;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.Test;
-import org.mddarr.payments.event.dto.Event1;
-import org.mddarr.payments.event.dto.Event2;
+import org.mddarr.rides.event.dto.Event1;
+import org.mddarr.rides.event.dto.Event2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 

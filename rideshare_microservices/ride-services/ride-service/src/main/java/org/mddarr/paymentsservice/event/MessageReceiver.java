@@ -2,8 +2,8 @@ package org.mddarr.paymentsservice.event;
 
 import org.mddarr.paymentsservice.Constants;
 
-import org.mddarr.payments.event.dto.Event3;
-import org.mddarr.payments.event.dto.Event4;
+import org.mddarr.rides.event.dto.Event3;
+import org.mddarr.rides.event.dto.Event4;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
