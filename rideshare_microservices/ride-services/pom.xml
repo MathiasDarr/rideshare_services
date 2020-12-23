@@ -18,7 +18,7 @@
     
     <modules>
         <module>ride-service</module>
-        <module>payments-avro-schema</module>
+        <module>avro-schema</module>
     </modules>
     <repositories>
         <repository>
