@@ -7,6 +7,8 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.junit.Test;
 import org.mddarr.rides.event.dto.AvroRideRequest;
 
+import org.mddarr.rideservice.models.RideRequest;
+import org.mddarr.rideservice.services.AvroRideRequestProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 
@@ -15,12 +17,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MessageProducerTest extends UatAbstractTest {
 
     @Autowired
-    private MessageProducer messageProducer;
+    private AvroRideRequestProducer avroRideRequestProducer;
 
     @Test
-    public void should_send_event1() {
-        messageProducer.sendEvent1();
-        ConsumerRecord<String, AvroRideRequest> singleRecord = KafkaTestUtils.getSingleRecord(event1Consumer, Constants.EVENT_1_TOPIC);
+    public void should_send_ride_request() {
+        avroRideRequestProducer.sendRideRequest(new RideRequest("Charles",6));
+        ConsumerRecord<String, AvroRideRequest> singleRecord = KafkaTestUtils.getSingleRecord(event1Consumer, Constants.Rides_TOPIC);
         assertThat(singleRecord).isNotNull();
     }
 

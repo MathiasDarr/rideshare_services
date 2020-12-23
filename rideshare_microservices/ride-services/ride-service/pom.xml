@@ -84,6 +84,14 @@
             <artifactId>aspectjweaver</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>monitoring-interceptors</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+
+
         <!-- TEST -->
 
 
