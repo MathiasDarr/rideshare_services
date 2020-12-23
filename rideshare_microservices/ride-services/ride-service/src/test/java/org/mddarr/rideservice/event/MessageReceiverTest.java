@@ -8,7 +8,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.Test;
 
 import org.mddarr.rides.event.dto.Event3;
-import org.mddarr.rides.event.dto.Event4;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 
@@ -31,15 +31,6 @@ public class MessageReceiverTest extends UatAbstractTest {
         assertThat(consumerRecord).isNotNull();
     }
 
-    @Test
-    public void should_receive_event_4() {
-        event4Producer.send(new ProducerRecord<>(Constants.EVENT_4_TOPIC, null, Event4.newBuilder()
-                .setTimestamp(System.currentTimeMillis())
-                .setId("id")
-                .build()));
 
-        ConsumerRecord<String, Event4> consumerRecord = KafkaTestUtils.getSingleRecord(event4Consumer, Constants.EVENT_4_TOPIC);
-        assertThat(consumerRecord).isNotNull();
-    }
 
 }

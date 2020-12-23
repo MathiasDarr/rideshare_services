@@ -11,10 +11,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
-import org.mddarr.rides.event.dto.Event1;
-import org.mddarr.rides.event.dto.Event2;
+import org.mddarr.rides.event.dto.AvroRideRequest;
 import org.mddarr.rides.event.dto.Event3;
-import org.mddarr.rides.event.dto.Event4;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -38,18 +37,16 @@ public abstract class UatAbstractTest {
     private EmbeddedKafkaBroker kafkaEmbedded;
     protected Producer<String, Event3> event3Producer;
     protected Consumer<String, Event3> event3Consumer;
-    protected Consumer<String, Event1> event1Consumer;
-    protected Consumer<String, Event2> event2Consumer;
+    protected Consumer<String, AvroRideRequest> event1Consumer;
 
-    protected Producer<String, Event4> event4Producer;
-    protected Consumer<String, Event4> event4Consumer;
+
+
 
     @Before
     public void setUp() {
         Map<String, Object> senderProps = kafkaProperties.buildProducerProperties();
 
         event3Producer = new KafkaProducer<>(senderProps);
-        event4Producer = new KafkaProducer<>(senderProps);
 
         //consumers used in test code needs to be created like this in code because otherwise it won't work
         Map<String, Object> configs = new HashMap<>(KafkaTestUtils.consumerProps("in-test-consumer", "false", kafkaEmbedded));
@@ -60,25 +57,23 @@ public abstract class UatAbstractTest {
         configs.put("schema.registry.url", "not-used");
 
         event3Consumer = new DefaultKafkaConsumerFactory<String, Event3>(configs).createConsumer("in-test-consumer", "10");
-        event4Consumer = new DefaultKafkaConsumerFactory<String, Event4>(configs).createConsumer("in-test-consumer", "10");
-        event1Consumer = new DefaultKafkaConsumerFactory<String, Event1>(configs).createConsumer("in-test-consumer", "10");
-        event2Consumer = new DefaultKafkaConsumerFactory<String, Event2>(configs).createConsumer("in-test-consumer", "10");
 
+        event1Consumer = new DefaultKafkaConsumerFactory<String, AvroRideRequest>(configs).createConsumer("in-test-consumer", "10");
 
         kafkaProperties.buildConsumerProperties();
         event3Consumer.subscribe(Lists.newArrayList(Constants.EVENT_3_TOPIC));
-        event4Consumer.subscribe(Lists.newArrayList(Constants.EVENT_4_TOPIC));
+
         event1Consumer.subscribe(Lists.newArrayList(Constants.EVENT_1_TOPIC));
-        event2Consumer.subscribe(Lists.newArrayList(Constants.EVENT_2_TOPIC));
+
     }
 
     @After
     public void reset() {
         //consumers needs to be closed because new one are created before every test
         event3Consumer.close();
-        event4Consumer.close();
+
         event1Consumer.close();
-        event2Consumer.close();
+
     }
 
 }
