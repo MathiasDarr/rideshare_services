@@ -19,7 +19,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<modules>
-		<module>payment-services</module>
+		<module>ride-services</module>
 <!--		<module>ride-request-services</module>-->
 <!--		<module>kafka-producer</module>-->
 <!--		<module>authorization-services</module>-->

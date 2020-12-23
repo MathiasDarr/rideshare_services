@@ -6,16 +6,16 @@
 
     <parent>
         <groupId>org.mddarr</groupId>
-        <artifactId>payments-services</artifactId>
+        <artifactId>rides-services</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>payment-service</artifactId>
+    <artifactId>ride-service</artifactId>
     <dependencies>
 
         <dependency>
             <groupId>org.mddarr</groupId>
-            <artifactId>payments-avro-schema</artifactId>
+            <artifactId>rides-avro-schema</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
