@@ -5,6 +5,7 @@ import org.apache.kafka.common.utils.Bytes;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.*;
 import org.mddarr.ridereceiver.models.WordCount;
+import org.mddarr.rides.event.dto.AvroRideRequest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -37,7 +38,7 @@ public class RideReceiverApplication {
 //				});
 //	}
 	@Bean
-	public Function<KStream<Bytes, String>, KStream<Bytes, WordCount>>  process() {
+	public Function<KStream<Bytes, String>, KStream<Bytes, AvroRideRequest>>  process() {
 		return (userClicksStream) -> {
 			userClicksStream.foreach((key, value) -> System.out.println("THE KEY IS AND THE VLAUE IS " + key + " " + value));
 			return 	userClicksStream.flatMapValues(value -> Arrays.asList(value.toLowerCase().split("\\W+")))
@@ -46,7 +47,7 @@ public class RideReceiverApplication {
 					.windowedBy(TimeWindows.of(Duration.ofMillis(WINDOW_SIZE_MS)))
 					.count(Materialized.as("WordCounts-1"))
 					.toStream()
-					.map((key, value) -> new KeyValue<>(null, new WordCount(key.key(), value, new Date(key.window().start()), new Date(key.window().end()))));
+					.map((key, value) -> new KeyValue<>(null, new AvroRideRequest("Charles", 3)));
 		};
 	}
 
