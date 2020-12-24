@@ -1,9 +1,11 @@
+server.port: 8090
+
 spring.cloud.stream:
   function:
     definition: process
     bindings:
-      process-in-0: words
-      process-out-0: counts
+      process-in-0: ride-requests
+      process-out-0: requests-out
 
 spring.cloud.stream.kafka.streams.binder:
   brokers: localhost:9092

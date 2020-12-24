@@ -38,16 +38,18 @@ public class RideReceiverApplication {
 //				});
 //	}
 	@Bean
-	public Function<KStream<Bytes, String>, KStream<Bytes, AvroRideRequest>>  process() {
-		return (userClicksStream) -> {
-			userClicksStream.foreach((key, value) -> System.out.println("THE KEY IS AND THE VLAUE IS " + key + " " + value));
-			return 	userClicksStream.flatMapValues(value -> Arrays.asList(value.toLowerCase().split("\\W+")))
-					.map((key, value) -> new KeyValue<>(value, value))
-					.groupByKey(Grouped.with(Serdes.String(), Serdes.String()))
-					.windowedBy(TimeWindows.of(Duration.ofMillis(WINDOW_SIZE_MS)))
-					.count(Materialized.as("WordCounts-1"))
-					.toStream()
-					.map((key, value) -> new KeyValue<>(null, new AvroRideRequest("Charles", 3)));
+	public Function<KStream<String, AvroRideRequest>, KStream<String, AvroRideRequest>>  process() {
+		return (rideRequestStream) -> {
+			rideRequestStream.foreach((key, value) -> System.out.println("THE KEY IS AND THE VLAUE IS " + key + " " + value));
+			return rideRequestStream;
+
+//			return 	userClicksStream.flatMapValues(value -> Arrays.asList(value.toLowerCase().split("\\W+")))
+//					.map((key, value) -> new KeyValue<>(value, value))
+//					.groupByKey(Grouped.with(Serdes.String(), Serdes.String()))
+//					.windowedBy(TimeWindows.of(Duration.ofMillis(WINDOW_SIZE_MS)))
+//					.count(Materialized.as("WordCounts-1"))
+//					.toStream()
+//					.map((key, value) -> new KeyValue<>(null, new AvroRideRequest("Charles", 3)));
 		};
 	}
 
